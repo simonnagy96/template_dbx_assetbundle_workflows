@@ -37,7 +37,7 @@ runs:
         ARM_USE_MSI: true
     - name: Validate Asset Bundle
       run: databricks bundle validate
-      shell: bash
+      shell: powershell
       working-directory: ${{ inputs.working-directory }}
       env:
         AUTHENTICATION_TYPE: ${{ inputs.authentication-type }}
@@ -45,3 +45,4 @@ runs:
         DATABRICKS_HOST: ${{ inputs.databricks-host }}
         ARM_CLIENT_ID: ${{ inputs.arm-client-id }}
         ARM_CLIENT_SECRET: ${{ inputs.arm-client-secret }}
+        

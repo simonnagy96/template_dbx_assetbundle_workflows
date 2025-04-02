@@ -37,6 +37,7 @@ runs:
         ARM_USE_MSI: true
     - name: Validate Asset Bundle
       run: databricks bundle validate
+      uses: databricks/setup-cli@main
       shell: bash
       working-directory: ${{ inputs.working-directory }}
       env:
